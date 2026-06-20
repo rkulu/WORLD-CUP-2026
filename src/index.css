@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "Fira Code", monospace;
+}
+
+:root {
+  --bg-color: #020617; /* Deep Slate 950 */
+  --accent-gold: #fbbf24;
+  --pitch-green: #10b981;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: #f8fafc;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Stadium Spotlight Background Effect with beautiful dual-colored pitch lights */
+.stadium-bg {
+  background-color: #020617;
+  background-image: 
+    radial-gradient(circle at 50% -20%, rgba(16, 185, 129, 0.15), transparent 60%),
+    radial-gradient(circle at 10% 100%, rgba(30, 58, 138, 0.2), transparent 45%),
+    radial-gradient(circle at 90% 100%, rgba(153, 27, 27, 0.1), transparent 45%);
+  background-attachment: fixed;
+}
+
+/* Liquid Glass with realistic high-contrast frosted glass border & drop shadows */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 40px 0 rgba(16, 185, 129, 0.12);
+}
+
+/* Semi-transparent interactive details */
+.frosted-badge {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+/* Custom Scrollbar for list overflow */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Scrollbar hiding style */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

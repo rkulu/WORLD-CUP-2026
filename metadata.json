@@ -1,0 +1,6 @@
+{
+  "name": "Bracket Piala Dunia",
+  "description": "Aplikasi interaktif untuk memetakan dan memantau babak 16 besar Piala Dunia dengan desain modern, elegan, dan premium.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
